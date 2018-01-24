@@ -69,5 +69,11 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
+@python_2_unicode_compatible
+class Kike(models.Model):
+    user = models.ForeignKey('NewUser',null=True)
+    article = models.ForeignKey(Article,null=True)
+    comment = models.ForeignKey(Comment,null=True)
+
 
 
