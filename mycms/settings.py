@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-# 申明默认的user类
+# 
 AUTH_USER_MODEL = "study.NewUser"
 
 INSTALLED_APPS = [

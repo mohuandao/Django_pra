@@ -36,7 +36,7 @@ class Article(models.Model):
     user = models.ManyToManyField('NewUser',blank=True)
     content = models.TextField('content')
     pub_date = models.DateTimeField(auto_now_add=True,editable=True)
-    update_time = models.DateTimeField(auth_now=True,null=True)
+    update_time = models.DateTimeField(auto_now=True,null=True)
     published = models.BooleanField('notDraft',default=True)
     poll_num = models.IntegerField(default=0)
     comment_num = models.IntegerField(default=0)
@@ -69,7 +69,7 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
-@python_2_unicode_compatible
+
 class Kike(models.Model):
     user = models.ForeignKey('NewUser',null=True)
     article = models.ForeignKey(Article,null=True)
